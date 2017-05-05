@@ -28,6 +28,6 @@ export class AppComponent implements OnInit {
     }
 
     getCategories(): void{
-      this.categories = this.categorieService.getCategories();
+      this.categorieService.getCategories().then(categories=> this.categories = categories);
     }
 }

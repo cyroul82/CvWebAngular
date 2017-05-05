@@ -5,18 +5,35 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
+import { RouterModule }   from '@angular/router';
+
 import { AppComponent } from './app.component';
-import {TopMenuComponent} from './app.topMenuComponent';
+import {ContactComponent} from './app.contactComponent';
 
 @NgModule({
   declarations: [
-    AppComponent, TopMenuComponent
+    AppComponent, ContactComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
+    RouterModule.forRoot([
+      {
+        path: '',
+        redirectTo: '/home',
+        pathMatch: 'full'
+      },
+      {
+        path: 'home',
+        component: AppComponent
+      },
+      {
+        path:'contact',
+        component: ContactComponent
+      }
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]
