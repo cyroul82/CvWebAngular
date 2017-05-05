@@ -7,11 +7,10 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import {TopMenuComponent} from './app.topMenuComponent';
-import { Categorie } from './app.categorie';
 
 @NgModule({
   declarations: [
-    AppComponent, TopMenuComponent, Categorie
+    AppComponent, TopMenuComponent
   ],
   imports: [
     BrowserModule,
