@@ -1,20 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { Categorie } from './app.categorie';
 import {CategorieService} from './categorie.service';
+import { HeaderComponent} from './app.headerComponent';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  providers: [CategorieService]
+  providers: [CategorieService, HeaderComponent]
 })
 export class AppComponent implements OnInit {
-  jumbotronTitle = 'Concepteur Développeur';
-  leadText = 'Je propose une approche de résolution des problèmes, associé à une bonne communication. Je suis ouvert à tous nouveaux défis qui me donnent l\'occasion d\'élargir mes compétences au sein d\'une organisation dynamique. Flexible et enthousiaste, j’aime travailler en équipe et prendre des initiatives.';
   selectedCategorie: Categorie;
   categories: Categorie[];
 
-  constructor(private categorieService:CategorieService){
+  constructor(private categorieService:CategorieService, private headerComponent:HeaderComponent){
 
   }
 
@@ -25,9 +24,15 @@ export class AppComponent implements OnInit {
 
     onSelect(categorie: Categorie): void {
       this.selectedCategorie = categorie;
+      this.toggleHeader(true);
     }
 
     getCategories(): void{
       this.categorieService.getCategories().then(categories=> this.categories = categories);
     }
+
+   toggleHeader(tag: boolean): void{
+      this.headerComponent.hide = tag;
+    }
+
 }
