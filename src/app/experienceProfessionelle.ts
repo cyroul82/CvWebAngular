@@ -1,6 +1,8 @@
-export class ExperienceProfessionnelle {
+export class Experience {
   id: number;
   place: string;
+  town: string;
   year: string;
-  point: string;
+  description: string;
+  point: string[];
 }
