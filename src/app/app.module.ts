@@ -8,9 +8,9 @@ import { HttpModule } from '@angular/http';
 // import { RouterModule }   from '@angular/router';
 
 import { AppComponent } from './app.component';
-import {ContactComponent} from './app.contactComponent';
-import {ExperienceComponent} from './app.experienceComponent';
-import {HeaderComponent} from './app.headerComponent';
+import {ContactComponent} from './Contact/app.contactComponent';
+import {ExperienceComponent} from './Experience/app.experienceComponent';
+import {HeaderComponent} from './Header/app.headerComponent';
 
 @NgModule({
   declarations: [

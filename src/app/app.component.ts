@@ -1,19 +1,20 @@
 import { Component, OnInit } from '@angular/core';
-import { Categorie } from './app.categorie';
-import {CategorieService} from './categorie.service';
-import { HeaderComponent} from './app.headerComponent';
+import { Category } from './Category/category';
+import {CategoryService} from './Category/categoryService';
+import { HeaderComponent} from './Header/app.headerComponent';
+
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  providers: [CategorieService, HeaderComponent]
+  providers: [CategoryService, HeaderComponent]
 })
 export class AppComponent implements OnInit {
-  selectedCategorie: Categorie;
-  categories: Categorie[];
+  selectedCategorie: Category;
+  categories: Category[];
 
-  constructor(private categorieService:CategorieService, private headerComponent:HeaderComponent){
+  constructor(private categorieService:CategoryService, private headerComponent:HeaderComponent){
 
   }
 
@@ -22,7 +23,7 @@ export class AppComponent implements OnInit {
       this.getCategories();
     }
 
-    onSelect(categorie: Categorie): void {
+    onSelect(categorie: Category): void {
       this.selectedCategorie = categorie;
       this.toggleHeader(true);
     }

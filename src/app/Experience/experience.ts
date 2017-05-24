@@ -4,4 +4,6 @@ export class Experience {
   town: string;
   year: string;
   description: string;
+  keypoint: any[];
+
 }

@@ -7,3 +7,29 @@ body{
 .header{
   padding-bottom: 1rem;
 }
+a{
+  text-decoration: none;
+  color: #607D8B;
+}
+a:link{
+  text-decoration: none;
+  color: #607D8B;
+}
+a:hover {
+  text-decoration: none;
+  color: #607D8B;
+  font-weight: bold;
+}
+a:visited {
+  text-decoration: none;
+  color: #607D8B;
+  font-weight: bold;
+}
+a:active {
+  text-decoration: none;
+  color: #607D8B;
+  font-weight: bold;
+}
+.card-header {
+  color:#607D8B;
+}
