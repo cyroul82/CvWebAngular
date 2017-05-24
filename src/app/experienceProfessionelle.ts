@@ -1,8 +1,7 @@
 export class Experience {
   id: number;
-  place: string;
+  job: string;
   town: string;
   year: string;
   description: string;
-  point: string[];
 }
